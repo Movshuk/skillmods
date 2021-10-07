@@ -62,7 +62,11 @@ public class BookShelfController {
         return "redirect:/books/shelf";
     }
 
-    // (?<author>(?<=author=')([Turgenev].+?)(?='|})).+(?<title>(?<=title=')([Onegin and Onegin]+?)(?='|})).+(?<size>(?<=size=)([300]+?)(?=}))
+    /*
+    API удаление объекта по входящему регулярному выражение
+    (?<author>(?<=author=')([Turgenev].+?)(?='|})).+(?<title>(?<=title=')([Onegin and Onegin]+?)(?='|})).+(?<size>(?<=size=)([300]+?)(?=}))
+    с группировкой поиска в строке
+     */
     @PostMapping("/remove-by-regex")
     public String removeBookByRegex(@RequestParam(value = "requestString") String requestString) {
         List<Book> books = bookService.getAllBooks();
