@@ -8,4 +8,8 @@ public interface ProjectRepository<T> {
     void store(T book);
 
     boolean removeItemById(Integer bookIdToRemove);
+
+    boolean isExist(Integer bookId);
+
+    void init();
 }

@@ -38,13 +38,22 @@ public class Book {
         this.size = size;
     }
 
+    public Book() {
+    }
+
+    public Book(String author, String title, Integer size) {
+        this.author = author;
+        this.title = title;
+        this.size = size;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
-                "id=" + id +
-                ", author='" + author + '\'' +
-                ", title='" + title + '\'' +
-                ", size=" + size +
-                '}';
+            "id=" + id +
+            ", author='" + author + '\'' +
+            ", title='" + title + '\'' +
+            ", size=" + size +
+            '}';
     }
 }

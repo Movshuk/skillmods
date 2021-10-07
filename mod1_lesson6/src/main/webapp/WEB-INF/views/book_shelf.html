@@ -63,6 +63,19 @@
         </table>
     </form>
 
+    <form method="post" th:action="@{/books/remove-by-regex}">
+        <table>
+            <tr>
+                <td>
+                    <input size="140" type="text" placeholder="regex" th:name="requestString"
+                           value="(?<author>(?<=author=')([Turgenev21].+?)(?='|})).+(?<title>(?<=title=')([Otsy and deti]+?)(?='|})).+(?<size>(?<=size=)([300]+?)(?=}))">
+                </td>
+                <td>
+                    <input type="submit" value="remove by regex ENTER">
+                </td>
+            </tr>
+        </table>
+    </form>
 
     <table id="books">
         <tr>
